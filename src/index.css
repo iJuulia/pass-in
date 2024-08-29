@@ -1,0 +1,19 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='checkbox'] {
+  @apply size-4 rounded border-white/10 bg-black/20 checked:bg-orange-400 checked:hover:bg-orange-500 focus:ring-orange-500 checked:focus:bg-orange-500;
+}
